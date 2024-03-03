@@ -1,0 +1,19 @@
+<div *ngFor = "let food of foods">
+    <mat-card class="custom-border">
+        <mat-card-header>
+            <mat-card-title>{{food}}</mat-card-title>
+            <mat-card-subtitle>Subtitle</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+            <p>
+            Your content here.
+            </p>
+        </mat-card-content>
+
+    <mat-card-actions>
+     <app-button buttonText="+ Add "></app-button>
+    </mat-card-actions>
+    </mat-card>
+ 
+</div>

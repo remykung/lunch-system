@@ -1,0 +1,17 @@
+.custom-menu {
+    width: 300px; /* Adjust based on your requirement */
+    background-color: #f0f0f0; /* Light grey background, adjust as needed */
+    padding: 10px;
+    border-radius: 8px; /* Optional: adds rounded corners to the menu */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
+    overflow: hidden; /* Ensures the content fits within the borders */
+  }
+  
+  .menu-item {
+    margin-bottom: 10px; /* Space between cards */
+  }
+  
+  .menu-item:last-child {
+    margin-bottom: 0; /* Removes margin from the last item */
+  }
+  
