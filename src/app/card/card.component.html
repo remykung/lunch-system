@@ -1,8 +1,8 @@
 <div *ngFor = "let food of foods">
     <mat-card class="custom-border">
         <mat-card-header>
-            <mat-card-title>{{food}}</mat-card-title>
-            <mat-card-subtitle>Subtitle</mat-card-subtitle>
+            <mat-card-title>{{food.name}}</mat-card-title>
+            <mat-card-subtitle *ngIf="food.category">Category: {{ food.category }}</mat-card-subtitle>
         </mat-card-header>
 
         <mat-card-content>
@@ -11,8 +11,9 @@
             </p>
         </mat-card-content>
 
-    <mat-card-actions>
-     <app-button buttonText="+ Add "></app-button>
+    <mat-card-actions class="button-container">
+     <app-button buttonText="+ Add " (click)="addOption(food)" ></app-button>
+     <app-button buttonText="- Remove" (click)="removeOption(food)" ></app-button>
     </mat-card-actions>
     </mat-card>
  

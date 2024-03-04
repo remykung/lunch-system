@@ -1,0 +1,16 @@
+h1 {
+    text-align: center;
+  }
+  
+  /* Styles for the .container to center it and its children */
+  .container {
+    display: flex;
+    justify-content: center; /* Centers children horizontally in the container */
+    align-items: center; /* Aligns children vertically center, optional */
+    gap: 20px; /* Adds space between the two components */
+    flex-direction: row; /* Ensures the children are laid out in a row */
+    margin: 0 auto; /* Centers the container itself horizontally */
+    width: fit-content; /* Makes the container's width fit its children */
+  }
+  
+  

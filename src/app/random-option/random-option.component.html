@@ -1,0 +1,38 @@
+<div>
+     <!-- Container for displaying the selected option -->
+     <mat-card class="custom-border">
+        <mat-card-header>
+            <mat-card-title>Your lunch option</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <!-- Conditionally display selected option or a prompt message -->
+            <ng-container *ngIf="selectedOption; else promptMessage">
+                {{ selectedOption }}
+            </ng-container>
+            <ng-template #promptMessage>
+                Press the button to get your lunch option.
+            </ng-template>
+        </mat-card-content>
+    </mat-card>
+
+    <app-button buttonText="Random Option" (click)="showRandomOption()" class="button-container"></app-button>
+
+
+    <div *ngIf="options.length > 0; else noOptions">
+        <p >I want to eat...</p>
+        <table mat-table [dataSource]="options" class="mat-elevation-z8">
+            <!-- Define columns here -->
+            <ng-container matColumnDef="option">
+                <th mat-header-cell *matHeaderCellDef> Option </th>
+                <td mat-cell *matCellDef="let option"> {{ option }} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="['option']"></tr>
+            <tr mat-row *matRowDef="let row; columns: ['option'];"></tr>
+        </table>
+    </div>
+
+    <ng-template #noOptions>
+        <p>Add your options</p>
+    </ng-template>
+</div>

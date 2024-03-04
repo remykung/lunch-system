@@ -4,10 +4,9 @@
     margin: 16px;
   }
 
-  
+
   .button-container {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px; /* Optional: adds some space below the button */
 }
-
-  
